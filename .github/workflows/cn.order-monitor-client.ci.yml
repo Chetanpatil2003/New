@@ -112,7 +112,7 @@ jobs:
   #     - name: Verify Helm3 installation
   #       run: helm version
   #     - name: Azure CLI Login
-  #       uses: Azure/login@v1
+  #       uses: Azure/login@v1ggg
   #       with:
   #         creds: '{"clientId":"${{ secrets.TERRAFORM_CLIENT_ID }}","clientSecret":"${{ secrets.TERRAFORM_CLIENT_SECRET }}","subscriptionId":"${{ secrets.TERRAFORM_SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TERRAFORM_TENANT_ID }}"}'
   #     - name: AKS Login (non-interactive)
