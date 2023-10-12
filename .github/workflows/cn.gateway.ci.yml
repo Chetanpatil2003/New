@@ -32,7 +32,7 @@ jobs:
     needs: ci
     env:
       AKS_NAME: aks-cloud-native-sample
-      RG_NAME: rg-cloud-native-sample-develop
+      RG_NAME: Cloud-native
       KUBELOGIN_VERSION: v0.0.24
     steps:
       - name: Checkout Repository
