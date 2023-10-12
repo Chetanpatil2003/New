@@ -1,0 +1,1 @@
+ShippingService has been installed in Namespace {{ .Release.Namespace }}
