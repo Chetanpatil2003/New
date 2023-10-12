@@ -45,7 +45,7 @@ jobs:
   #         app_name: notification
   #         app_display_name: Notification Service
   #         working_dir: ./src/NotificationService
-  #         helm_chart_location: ./charts/notification
+  #         helm_chart_location: ./charts/notificationddd
   #         aks_name: ${{ env.AKS_NAME }}
   #         aks_resource_group_name: ${{ env.RG_NAME }}
   #         kubelogin_version: ${{ env.KUBELOGIN_VERSION }}
