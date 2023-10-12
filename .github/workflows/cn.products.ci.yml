@@ -26,32 +26,32 @@ jobs:
           app_name: products
           app_display_name: Products Service
           working_dir: ./src/ProductsService
-          github_token: ${{ secrets.github_token }}
-  # cd:
-  #   name: "CD: ProductsService"
-  #   runs-on: ubuntu-latest
-  #   needs: ci
-  #   env:
-  #     AKS_NAME: aks-cloud-native-sample
-  #     RG_NAME: rg-cloud-native-sample-develop
-  #     KUBELOGIN_VERSION: v0.0.24
-  #   steps:
-  #     - name: Checkout Repository
-  #       uses: actions/checkout@v3
-  #     - name: Deploy Products Service of Cloud-Native Sample
-  #       uses: "./.github/templates/deploy"
-  #       with:
-  #         acr_name: ${{ secrets.ACR_NAME}}
-  #         app_name: products
-  #         app_display_name: Products Service
-  #         working_dir: ./src/ProductsService
-  #         helm_chart_location: ./charts/products
-  #         aks_name: ${{ env.AKS_NAME }}
-  #         aks_resource_group_name: ${{ env.RG_NAME }}
-  #         kubelogin_version: ${{ env.KUBELOGIN_VERSION }}
-  #         kubernetes_namespace: cloud-native-sample
-  #         github_token: ${{ secrets.github_token }}
-  #         terraform_client_id: ${{ secrets.TERRAFORM_CLIENT_ID }}
-  #         terraform_client_secret: ${{ secrets.TERRAFORM_CLIENT_SECRET }}
-  #         terraform_subscription_id: ${{ secrets.TERRAFORM_SUBSCRIPTION_ID }}
-  #         terraform_tenant_id: ${{ secrets.TERRAFORM_TENANT_ID }}
+          github_token: ${{ secrets.GIT_TOKEN }}
+  cd:
+    name: "CD: ProductsService"
+    runs-on: ubuntu-latest
+    needs: ci
+    env:
+      AKS_NAME: aks-cloud-native-sample
+      RG_NAME: rg-cloud-native-sample-develop
+      KUBELOGIN_VERSION: v0.0.24
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Deploy Products Service of Cloud-Native Sample
+        uses: "./.github/templates/deploy"
+        with:
+          acr_name: ${{ secrets.ACR_NAME}}
+          app_name: products
+          app_display_name: Products Service
+          working_dir: ./src/ProductsService
+          helm_chart_location: ./charts/products
+          aks_name: ${{ env.AKS_NAME }}
+          aks_resource_group_name: ${{ env.RG_NAME }}
+          kubelogin_version: ${{ env.KUBELOGIN_VERSION }}
+          kubernetes_namespace: cloud-native-sample
+          github_token: ${{ secrets.GIT_TOKEN }}
+          terraform_client_id: ${{ secrets.TERRAFORM_CLIENT_ID }}
+          terraform_client_secret: ${{ secrets.TERRAFORM_CLIENT_SECRET }}
+          terraform_subscription_id: ${{ secrets.TERRAFORM_SUBSCRIPTION_ID }}
+          terraform_tenant_id: ${{ secrets.TERRAFORM_TENANT_ID }}
