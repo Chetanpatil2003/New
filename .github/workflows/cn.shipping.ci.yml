@@ -55,3 +55,7 @@ jobs:
           terraform_client_secret: ${{ secrets.TERRAFORM_CLIENT_SECRET }}
           terraform_subscription_id: ${{ secrets.TERRAFORM_SUBSCRIPTION_ID }}
           terraform_tenant_id: ${{ secrets.TERRAFORM_TENANT_ID }}
+
+
+
+          
