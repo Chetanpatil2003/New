@@ -33,7 +33,7 @@ jobs:
     env:
       AKS_NAME: aks-cloud-native-sample
       RG_NAME: rg-cloud-native-sample-develop
-      KUBELOGIN_VERSION: v1.26.6
+      KUBELOGIN_VERSION: v0.0.32
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
